@@ -22,7 +22,7 @@
    mode: 0755
    
 - name: delete index par defaut
-   file:
+  file:
     path: /var/www/html/index.html
     state: absent
     
