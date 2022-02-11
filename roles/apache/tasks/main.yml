@@ -3,6 +3,7 @@
 - name: Installation packages
   yum:
     name:
+      - git
       - epel-release
       - httpd
       - php
