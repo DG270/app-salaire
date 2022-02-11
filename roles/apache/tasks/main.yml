@@ -27,10 +27,6 @@
    state: directory
    mode: 0755
 
-- name: Clone a repo with separate git directory
-  git:
-    repo: https://github.com/ludovic-tech/app-php.git
-    dest: /var/www/html
 
 
 # tasks file for apache
