@@ -19,6 +19,11 @@
     port: http
     permanent: yes
     state: enabled
+    
+- name: reload firewall
+  systemd:
+    firewalld: http
+    state: reloaded
 
 - name: droit d'ecriture sur dossier http
   file:
