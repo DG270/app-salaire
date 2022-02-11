@@ -19,11 +19,8 @@
     service: http
     permanent: yes
     state: enabled
+    imediate: true
     
-- name: reload firewall
-  systemd:
-    firewalld: http
-    state: reloaded
 
 - name: droit d'ecriture sur dossier http
   file:
