@@ -33,11 +33,9 @@
 #   path: /var/www/html/index.html
 #   state: absent
    
- - name: copie app
-   copy:
-     src: app/
-     dest: /var/www/html
-
-
+- name: copie app
+  copy:
+    src: app/
+    dest: /var/www/html
 
 # tasks file for apache
