@@ -10,7 +10,7 @@ node{
           sshpass -p \'P@ss4ing\' ssh-copy-id  -o stricthostkeychecking=no root@app-salaire.dimitri.form
           '''
       }
-      stage('Ansible') {
+      stage('Playbook') {
         ansiblePlaybook (
             colorized: true,          
             playbook: 'playbook.yml',
