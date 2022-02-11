@@ -8,19 +8,12 @@
       - php-mysql
     state: present
 
-- name: restart and enable apache
-  systemd:
-    name: httpd
-    enabled: yes
-    state: restarted
-
 - name: ouvrir port 80
   firewalld:
     service: http
     permanent: yes
     state: enabled
-    immediate: true
-    
+    immediate: true    
 
 - name: droit d'ecriture sur dossier http
   file:
@@ -37,6 +30,12 @@
   copy:
     src: app/
     dest: /var/www/html
+
+- name: restart and enable systemd apache service
+  systemd:
+   name: httpd
+   enabled: yes
+   state: restarted
  
 
 # tasks file for apache
