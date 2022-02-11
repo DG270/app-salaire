@@ -1,5 +1,4 @@
-
-- name: install serveur web
+- name: install roles
   hosts: all
   roles:
     - apache
