@@ -19,7 +19,7 @@
     service: http
     permanent: yes
     state: enabled
-    imediate: true
+    immediate: true
     
 
 - name: droit d'ecriture sur dossier http
