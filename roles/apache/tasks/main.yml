@@ -16,7 +16,7 @@
 
 - name: ouvrir port 80
   firewalld:
-    port: http
+    service: http
     permanent: yes
     state: enabled
     
@@ -31,10 +31,6 @@
    state: directory
    mode: 0755
    
-#- name: Supression du fichier index.html par défaut
-#  file:
-#   path: /var/www/html/index.html
-#   state: absent
    
 - name: copie app
   copy:
